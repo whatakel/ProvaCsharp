@@ -1,0 +1,51 @@
+Integrante: Kelvin Cardoso e Leticia Sampaio
+
+SISTEMA ESTA NA PORTA LOCALHOST:5093
+
+Funcionadade para somatoria do tempo medio para conclusão em minutos foi utiliza cshtml para o front end listado no arquivo index.cshtml
+
+
+
+# Documentação do Projeto TodoList
+
+## Descrição
+Este projeto é uma aplicação ASP.NET Core MVC para gerenciamento de tarefas (ToDo List), com persistência em arquivo JSON e interface web moderna.
+
+## Funcionalidades
+- Login com seleção de tipo (usuário/admin)
+- Cadastro, edição, exclusão e listagem de tarefas
+- Visual moderno, responsivo e com cores suaves
+- Datas de criação, conclusão e tempo gasto visíveis
+- Cálculo de soma e média de tempo gasto nas tarefas concluídas
+- Persistência dos dados em arquivo JSON
+- API REST para integração externa
+- Arquivo de testes para Postman incluso
+
+## Estrutura de Pastas
+- `Controllers/` - Lógica dos controladores MVC e API
+- `Data/` - Persistência dos dados (`dados.json`, `testes.json`, `postman-collection.json`)
+- `Models/` - Modelos de dados (ex: `TodoTask`)
+- `View/` - Páginas Razor (cshtml)
+
+## Como rodar o projeto
+1. Abra o PowerShell na pasta do projeto.
+2. Execute:
+   ```
+   dotnet run --project .\projeto-c--main\TodoList.csproj
+   ```
+3. Acesse no navegador: http://localhost:5093
+
+## Testes de API
+- Utilize o arquivo `Data/postman-collection.json` no Postman para testar os endpoints da API.
+- Exemplos de endpoints:
+  - Listar tarefas: `GET /api/tarefas/admin/usuario`
+  - Criar tarefa: `POST /api/tarefas`
+  - Atualizar status: `POST /api/tarefas/{id}/status`
+  - Deletar tarefa: `DELETE /api/tarefas/{id}`
+
+## Observações
+- Não é necessário banco de dados relacional.
+- O login é apenas para controle de sessão, sem senha.
+- O projeto é compatível com .NET 8.0.
+
+---
